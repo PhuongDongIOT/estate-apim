@@ -1,17 +1,17 @@
 module.exports = {
-  apps: [
-    {
-      name: 'estate-apim',
-      script: 'dist/app.js',
-      instances: 1,
-      exec_mode: 'fork',
-      max_memory_restart: '500M',
-      autorestart: true,
-      watch: false,
-      env: {
-        NODE_ENV: 'production',
-        PORT: 4000
-      }
-    }
-  ]
+    apps: [
+        {
+            name: 'estate-apim',
+            script: 'npm',
+            args: 'run start',
+            instances: 1,
+            exec_mode: 'fork',
+            autorestart: true,
+            watch: false,
+            max_memory_restart: '500M',
+            env: {
+                NODE_ENV: 'production'
+            }
+        }
+    ]
 };
