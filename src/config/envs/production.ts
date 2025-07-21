@@ -1,4 +1,4 @@
-import type { MySqlDriver } from '@mikro-orm/mysql';
+import type { PostgreSqlDriver } from '@mikro-orm/postgresql';
 import type { MikroOrmModuleOptions } from '@mikro-orm/nestjs';
 
 export const config = {
@@ -23,5 +23,5 @@ export const config = {
       acquireTimeoutMillis: 10000,
       destroyTimeoutMillis: 60000,
     },
-  } satisfies MikroOrmModuleOptions<MySqlDriver>,
+  } satisfies MikroOrmModuleOptions<PostgreSqlDriver>,
 };

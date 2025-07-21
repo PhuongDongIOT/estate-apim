@@ -1,16 +1,16 @@
-import { MySqlDriver } from '@mikro-orm/mysql';
+import { PostgreSqlDriver } from '@mikro-orm/postgresql';
 import type { MikroOrmModuleOptions } from '@mikro-orm/nestjs';
 
 export const config = {
   mikro: {
-    driver: MySqlDriver,
+    driver: PostgreSqlDriver,
     // entities: [`${import.meta.dirname}/../../entities`],
     // entitiesTs: [`${import.meta.dirname}/../../entities`],
     autoLoadEntities: true,
-    dbName: 'test',
+    dbName: 'postgres',
     // timezone: '+09:00',
     allowGlobalContext: true,
-  } satisfies MikroOrmModuleOptions<MySqlDriver>,
+  } satisfies MikroOrmModuleOptions<PostgreSqlDriver>,
 
   hello: 'world',
   jwtSecret: process.env.JWT_SECRET,

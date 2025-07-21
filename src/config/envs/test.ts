@@ -1,4 +1,4 @@
-import type { MySqlDriver } from '@mikro-orm/mysql';
+import type { PostgreSqlDriver } from '@mikro-orm/postgresql';
 import type { MikroOrmModuleOptions } from '@mikro-orm/nestjs';
 
 export const config = {
@@ -9,5 +9,5 @@ export const config = {
     host: process.env['DB_HOST'] ?? '127.0.0.1',
     user: process.env['DB_USER'],
     password: process.env['DB_PASSWORD'],
-  } satisfies MikroOrmModuleOptions<MySqlDriver>,
+  } satisfies MikroOrmModuleOptions<PostgreSqlDriver>,
 };
