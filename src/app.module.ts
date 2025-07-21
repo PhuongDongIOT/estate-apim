@@ -1,5 +1,5 @@
 import type { MikroORMOptions } from '@mikro-orm/core';
-import { MySqlDriver } from '@mikro-orm/mysql';
+import { PostgreSqlDriver } from '@mikro-orm/postgresql';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
 import { Module, ValidationPipe, type MiddlewareConsumer, type NestModule } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
@@ -34,7 +34,7 @@ import { SampleModule } from './sample/sample.module.js';
     MikroOrmModule.forRootAsync({
       useFactory: (config: ConfigService) => config.getOrThrow<MikroORMOptions>('mikro'),
       inject: [ConfigService],
-      driver: MySqlDriver,
+      driver: PostgreSqlDriver,
     }),
     // Global
     CommonModule,

@@ -57,6 +57,7 @@
     "@inquirer/prompts": "^7.4.1",
     "@mikro-orm/cli": "^6.4.13",
     "@mikro-orm/entity-generator": "^6.4.13",
+    "@mikro-orm/postgresql": "^6.4.16",
     "@nestjs/cli": "^11.0.6",
     "@nestjs/testing": "^11.0.16",
     "@swc-node/register": "^1.10.10",
